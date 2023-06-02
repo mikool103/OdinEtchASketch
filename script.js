@@ -20,10 +20,12 @@ colors.forEach((color) => color.addEventListener('dblclick', function(){
 
 
 
+printGrid(16,35)
 
 
 
-printGrid(16,60);
+
+
 
 //Gets the amount of squares to create
 function getAmountOfSquares(widthOfGrid) {
@@ -32,7 +34,7 @@ function getAmountOfSquares(widthOfGrid) {
 
 //Calculate the width of the squares depending on the width of the grid
 function calculateWidthOfSquares(widthOfGrid) {
-    widhtOfSquares = 960/widthOfGrid;
+    widhtOfSquares = 560/widthOfGrid;
    return widhtOfSquares.toFixed(2);
 }
 
