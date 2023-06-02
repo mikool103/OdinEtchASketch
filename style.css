@@ -1,3 +1,6 @@
+body {
+    background-image: url("images/cartoon-2614617_1280.webp");
+}
 
 .main-container{
     display: flex;
@@ -11,19 +14,26 @@
     flex-direction: column;
     justify-content: center;
     padding: 10px;
+    gap: 10px;
 }
 
 .page-title{
     font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    
 }
 
 .grid-container {
     display: flex;
     width: 1000px;
     height: 1000px;
-    border: black solid 1px;
+    border: black solid 3px;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
+    background-image: url("images/abstract-seamless-pattern-of-orange-white-ceramic-floor-tiles-design-geometric-mosaic-texture-for-the-decoration-of-the-kitchen-room-illustration-free-vector.jpg");
+
 }
 
 .grid-second-container{
@@ -34,7 +44,7 @@
     border: black solid 1px;
     justify-content: center;
     align-items: center;
-
+    background-color: white;
 }
 
 .grid-square {
@@ -49,3 +59,66 @@
     width: 500;
     height: 200;
 }
+
+.clear-color-button {
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    width: 500;
+    height: 200;
+}
+
+.color-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 25px;
+    gap: 15px;
+}
+
+.color-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: black solid 1px;
+}
+
+.grid-paint-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.color-container button:active {
+    transform: translateY(-4px);
+  }

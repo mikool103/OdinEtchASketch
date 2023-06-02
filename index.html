@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikool's Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -14,24 +20,27 @@
         <div class="header">
             <div class="page-title">Mikool's Sketch</div>
             <button class="header-button">Change amount of Squares</button>
+            <button class="clear-color-button">Erase grid</button>
         </div>
-        <div class="grid-container">
-            <div class ="grid-second-container">
-                <div class="grid"></div>
-
+        <div class="grid-paint-container">
+            <div class="paint-container">
+                <div class="color-container">
+                    <button class="white"></button>
+                    <button class="black"></button>
+                    <button class="blue "></button>
+                    <button class="yellow"></button>
+                    <button class="green"></button>
+                    <button class="purple"></button>
+            </div>
+            </div>
+            <div class="grid-container">
+                <div class ="grid-second-container">
+                    <div class="grid"></div>
+    
+                </div>
+                
             </div>
             
-        </div>
-        <div class="paint-container">
-            <div class="color-container">
-                <div class="color-box red"></div>
-                <div class="color-box blue "></div>
-                <div class="color-box yellow"></div>
-                <div class="color-box green"></div>
-                <div class="color-box purple"></div>
-                <div class="color-box black"></div>
-            </dic>
-        </div>
     </div>
     
 </body>

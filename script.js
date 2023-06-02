@@ -1,5 +1,24 @@
 const mainButton = document.querySelector('.header-button');
 mainButton.addEventListener('click', changeAmountOfSquare);
+let mouseDown = false;
+document.addEventListener('mousedown', function(){mouseDown = true});
+document.addEventListener('mouseup', function(){mouseDown = false});
+const clearColor = document.querySelector('.clear-color-button');
+clearColor.addEventListener('click', clearColorGrid);
+
+currentColor = ''
+
+let colors = document.querySelectorAll('.color-container button');
+colors.forEach((color) => color.addEventListener('click', function(e){
+  currentColor = this.className;
+}));
+colors.forEach((color) => color.addEventListener('dblclick', function(){
+    squares = document.querySelectorAll('.grid-square');
+    squares.forEach((square) => square.style.backgroundColor = this.className);
+}))
+
+
+
 
 
 
@@ -26,15 +45,20 @@ function clearGrid() {
 //Print squares to the grid
 function printGrid(widthOfGrid, widhtOfSquares) {
     squaresToPrint = getAmountOfSquares(widthOfGrid);
-    squareContainer = document.querySelector('.grid-second-container')
+    squareContainer = document.querySelector('.grid-second-container');
     for(let i = 0; i < squaresToPrint; i++){
        let square = document.createElement('div');
        square.className = 'grid-square';
        square.style.width = widhtOfSquares + "px";
        square.style.height = widhtOfSquares + "px";
-       square.addEventListener('mouseover', function(){
-        square.style.background = 'black'; //paint squares black when hovering over
-       });
+       square.addEventListener('mouseover', function(e){
+        if (mouseDown && e.type === 'mouseover') {
+            square.style.backgroundColor = currentColor; 
+
+        }
+        //paint squares black when hovering over
+        });
+
        squareContainer.appendChild(square); 
     }
     
@@ -54,6 +78,13 @@ function changeAmountOfSquare(){
     }
 
 }
+
+function clearColorGrid () {
+    squares = document.querySelectorAll('.grid-square');
+    squares.forEach((square) => square.style.backgroundColor = '');
+}
+
+
 
 
 
